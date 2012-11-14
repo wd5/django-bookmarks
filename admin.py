@@ -2,7 +2,7 @@ from django.contrib import admin
 #from mptt.admin import MPTTModelAdmin
 
 from common.admin import CommonPostAdmin, CommonCategoryAdmin
-from . models import Category, Post
+from . models import BookmarksCategory, BookmarksPost
 
 class CategoryAdmin( CommonCategoryAdmin ):
     pass
@@ -10,5 +10,6 @@ class CategoryAdmin( CommonCategoryAdmin ):
 class PostAdmin( CommonPostAdmin ):
     pass
 
-admin.site.register( Category, CategoryAdmin )
-admin.site.register( Post, PostAdmin )
+admin.site.register( BookmarksCategory, CategoryAdmin )
+admin.site.register( BookmarksPost, PostAdmin )
+
