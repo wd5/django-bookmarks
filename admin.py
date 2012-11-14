@@ -1,10 +1,10 @@
 from django.contrib import admin
 #from mptt.admin import MPTTModelAdmin
 
-from common.admin import CommonPostAdmin, CommonCategooryAdmin
+from common.admin import CommonPostAdmin, CommonCategoryAdmin
 from . models import Category, Post
 
-class CategoryAdmin( CommonCategooryAdmin ):
+class CategoryAdmin( CommonCategoryAdmin ):
     pass
 
 class PostAdmin( CommonPostAdmin ):
