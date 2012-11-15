@@ -17,3 +17,4 @@ class BookmarksEditForm( CommonPostEditForm ):
 
     class Meta( CommonPostEditForm.Meta ):
         model = BookmarksPost
+        fields = ( 'title', 'content', 'category', 'site', 'tags', )
