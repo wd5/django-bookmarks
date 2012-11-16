@@ -96,16 +96,18 @@ def edit( request, id ):
     except BookmarksPost.DoesNotExist:
         raise Http404
 
+    form = BookmarksEditForm( instance = post )
+
     if request.method == "POST":
         form = BookmarksEditForm( request.POST, instance = post )
-        if form.is_valid:
+        if form.is_valid():
             form.save()
             post.status = 'active'
             post.save()
 
+            del request.session['bookmarks-draft-id']
+
             return redirect( 'bookmarks-post', id = id )
-    else:
-        form = BookmarksEditForm( instance = post )
 
     data = {
         'form':form
