@@ -8,7 +8,7 @@ from . models import BookmarksPost, BookmarksCategory
 class BookmarksEditForm( CommonPostEditForm ):
     category = forms.ModelMultipleChoiceField( 
         queryset = BookmarksCategory.objects.all(),
-        required = False,
+        required = True,
         widget = FilteredSelectMultiple( 
             'categories',
             False,

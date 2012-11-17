@@ -110,7 +110,7 @@ def edit( request, id ):
             return redirect( 'bookmarks-post', id = id )
 
     data = {
-        'form':form
+        'form':form,
     }
     return render( request, 'bookmarks/edit.html', data )
 
