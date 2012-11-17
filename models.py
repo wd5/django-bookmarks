@@ -7,14 +7,16 @@ from mptt.models import MPTTModel, TreeForeignKey
 
 from urlparse import urlparse
 
-
 from common.models import CommonCategory, CommonPost
 
 class BookmarksCategory( CommonCategory ):
     pass
 
 class BookmarksPost( CommonPost ):
-    category = models.ManyToManyField( BookmarksCategory )
+    category = models.ManyToManyField( 
+        BookmarksCategory,
+        related_name = "%(app_label)s_%(class)s_related",
+    )
     site = models.URLField( null = True )
 
     def hostname( self ):
