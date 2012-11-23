@@ -3,8 +3,9 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.utils.translation import ugettext_lazy as _
-from zokiguide.decorators import render_to
 from django.contrib.auth.models import User
+from django.db.models import ObjectDoesNotExist
+from django.http import Http404, HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from . models import BookmarksPost, BookmarksCategory
