@@ -8,14 +8,14 @@
     		</div>
     		<div class="span9">
     			<div id="content">
-    				<h2><a href="{{ post.source }}">{{ post.title }}</a></h2>
+    				<h2><a href="{{ post.site }}" target="_blank">{{ post.title }}</a></h2>
     				<div>
     					{% autoescape off %}
     						{{ post.content }}
     					{% endautoescape %}
     				</div>
     			</div>
-    			
+
     		</div>
     	</div>
     </div>

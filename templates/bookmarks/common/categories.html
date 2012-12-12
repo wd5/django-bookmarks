@@ -13,7 +13,7 @@
                 >
                     <a href="{% url bookmarks-category id=node.id slug=node.slug %}">{{ node.title }}</a>
                     {% if not node.is_leaf_node %}
-                        <ul class="nav nav-list children level-{{ node.level }}" style="display: none;">
+                        <ul class="nav nav-list children level-{{ node.level }}">
                             {{ children }}
                         </ul>
                     {% endif %}

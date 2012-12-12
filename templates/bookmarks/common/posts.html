@@ -1,10 +1,10 @@
 	{% for post in posts %}
 		<div>
-			<h2><a href="{{ post.site }}">{{ post.title }}</a></h2>
+			<h4><a href="{{ post.site }}"  target="_blank">{{ post.title }}</a></h4>
 			<p>{{ post.snippet }}</p>
 			<div>
 				<span><a href="{% url bookmarks-post id=post.id slug=post.slug %}">more ... </a></span>
-				| <span><a href="{{ post.site }}">{{ post.hostname }}</a></span>
+				| <span><a href="{{ post.site }}"  target="_blank">{{ post.hostname }}</a></span>
 			</div>
 		</div>
 	{% empty %}
