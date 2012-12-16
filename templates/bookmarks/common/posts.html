@@ -3,7 +3,7 @@
 			<h4><a href="{{ post.site }}"  target="_blank">{{ post.title }}</a></h4>
 			<p>{{ post.snippet }}</p>
 			<div>
-				<span><a href="{% url bookmarks-post id=post.id slug=post.slug %}">more ... </a></span>
+				<span><a href="{% url 'bookmarks-post' id=post.id slug=post.slug %}">more ... </a></span>
 				| <span><a href="{{ post.site }}"  target="_blank">{{ post.hostname }}</a></span>
 			</div>
 		</div>
