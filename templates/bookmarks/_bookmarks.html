@@ -1,3 +1,17 @@
 {% extends "template.html" %}
 
-{% block title %} Bokmarks / {% endblock %}
+{% load i18n %}
+
+{% block module_style %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/blogs/bookmarks.css">
+{% endblock %}
+
+{% block title %} {% trans 'bookmarks'|title %} / {% endblock %}
+
+{% block module_name %}{% trans 'bookmarks'|title %}{% endblock %}
+{% block module_description %}
+    {% blocktrans %}
+        useful online resources
+    {% endblocktrans %}
+{% endblock %}
+{% block module_actions %}{% endblock %}
